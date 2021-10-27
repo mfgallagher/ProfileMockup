@@ -1,21 +1,50 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import ProfilePage from './app/screens/ProfilePage';
+import EditNumber from './app/screens/EditNumber';
+import EditName from './app/screens/EditName';
+import EditEmail from './app/screens/EditEmail';
+import EditPhoto from './app/screens/EditPhoto';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
+
+const Stack = createNativeStackNavigator();
+
 
 export default function App() {
+  
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen 
+          name=" " 
+          component={ProfilePage}
+          initialParams={{ 
+            phone: "",
+            name: "",
+            email: ""
+          }}
+        />
+        <Stack.Screen 
+          name="Edit Name" 
+          component={EditName}
+        />
+        <Stack.Screen 
+          name="Edit Number" 
+          component={EditNumber}
+        />
+        <Stack.Screen 
+          name="Edit Email" 
+          component={EditEmail}
+        />
+        <Stack.Screen 
+          name="Edit Photo" 
+          component={EditPhoto}
+        />
+      </Stack.Navigator>
+    </NavigationContainer>
+    
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
