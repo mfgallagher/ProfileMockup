@@ -1,24 +1,25 @@
 import React, { useState } from 'react';
-import { 
-  TextInput, StyleSheet, Text, Pressable, SafeAreaView 
-} from 'react-native';
+import { TextInput, Text, StyleSheet, Button, Pressable} from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 
-export default function EditNumber({navigation}: any, {route}: any) {
+export default function EditBio({navigation}: any, {route}: any) {
 
-  const [phoneNumber, setPhoneNumber] = useState("");
+  const [bioText, setBioText] = useState("");
   
   return (
     <SafeAreaView style={ styles.container }>
 
-      <Text style={ styles.title }> What's Your Digits? </Text>
+      <Text style={ styles.title }> Tell Us A Little About Yourself! </Text>
       
       <TextInput
         style={styles.textInput}
-        placeholder="Enter Number Here."
+        multiline
+        numberOfLines={ 5 }
+        placeholder="Put Text Here."
         placeholderTextColor="#003f5c"
-        value={phoneNumber}
-        onChangeText={setPhoneNumber}
+        value={bioText}
+        onChangeText={setBioText}
       />
   
       <Pressable
@@ -26,7 +27,7 @@ export default function EditNumber({navigation}: any, {route}: any) {
             onPress={() => {
                 navigation.navigate({
                     name: ' ',
-                    params: { phone: phoneNumber },
+                    params: { bio: bioText },
                     merge: true,
                 });
             }}

@@ -6,8 +6,10 @@ import EditNumber from './app/screens/EditNumber';
 import EditName from './app/screens/EditName';
 import EditEmail from './app/screens/EditEmail';
 import EditPhoto from './app/screens/EditPhoto';
+import EditBio from './app/screens/EditBio';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 
 
 const Stack = createNativeStackNavigator();
@@ -42,6 +44,10 @@ export default function App() {
         <Stack.Screen 
           name="Edit Photo" 
           component={EditPhoto}
+        />
+        <Stack.Screen 
+          name="Edit Bio" 
+          component={EditBio}
         />
       </Stack.Navigator>
     </NavigationContainer>
