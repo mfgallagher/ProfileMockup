@@ -98,6 +98,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     fontWeight: "bold",
+    color: '#7a42f4',
   },
   textInput: {
       height: 50,
@@ -112,6 +113,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#7a42f4',
+    marginTop: 100,
   },
   buttonText: {
       color: '#ffffff',
@@ -121,5 +123,6 @@ const styles = StyleSheet.create({
       paddingVertical: 20,
       width: 300,
       height: 300,
+      marginTop: 25
   }
 });

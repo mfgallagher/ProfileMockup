@@ -35,31 +35,25 @@ import { ImageInfo } from 'expo-image-picker/build/ImagePicker.types';
         <Pressable
           style={ styles.button }
           onPress={ () => navigation.navigate("Edit Name") } >
-            <Text style={ styles.text }> { route?.params?.name || "Your Name" } </Text>
+            <Text style={ styles.text }> { route?.params?.name || "Name" } </Text>
         </Pressable>
-
-        <Text>   </Text>
 
         <Pressable
           style={ styles.button }
           onPress={ () => navigation.navigate("Edit Number") } >
-            <Text style={ styles.text }> { route?.params?.phone || "Set Your Phone Number" } </Text>
+            <Text style={ styles.text }> { route?.params?.phone || "Phone Number" } </Text>
         </Pressable>
-
-        <Text>   </Text>
 
         <Pressable
           style={ styles.button }
           onPress={ () => navigation.navigate("Edit Email") } >
-            <Text style={ styles.text }> { route?.params?.email || "Your Email" } </Text>
+            <Text style={ styles.text }> { route?.params?.email || "Email" } </Text>
         </Pressable>
-
-        <Text>   </Text>
 
         <Pressable
           style={ styles.button }
           onPress={ () => navigation.navigate("Edit Bio") } >
-            <Text style={ styles.text }> { route?.params?.bio || "Your Bio" } </Text>
+            <Text style={ styles.text }> { route?.params?.bio || "Bio" } </Text>
         </Pressable>
 
       </SafeAreaView>
@@ -69,14 +63,16 @@ import { ImageInfo } from 'expo-image-picker/build/ImagePicker.types';
   const styles = StyleSheet.create({
     container: {
         flex: 1,
-        marginTop: StatusBar.currentHeight || 0,
+        marginTop: 15,
         alignItems: "center",
         justifyContent: "center",
+        position: 'absolute'
     },
     title: {
         fontSize: 32,
         fontWeight: "bold",
         color: '#0099FF',
+        marginTop: 10,
     },
     item: {
         backgroundColor: '#f9c2ff',
@@ -92,6 +88,7 @@ import { ImageInfo } from 'expo-image-picker/build/ImagePicker.types';
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#ffffff',
+        marginTop: 50
     },
     textInput: {
         height: 50,
