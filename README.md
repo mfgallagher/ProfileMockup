@@ -11,7 +11,16 @@ npm install
 ```
 
 This will download the necessary packages for the project to work as intended.
-To run the project locally, you will have to run:
+This project uses Expo, a tool to develop and build mobile applications across
+multiple platforms easily. To run the project, you will also have to download
+expo-cli, the command line interface for Expo projects. To install this,
+run:
+
+```
+npm install --global expo-cli
+```
+
+Then, to run the project locally, you will have to run:
 
 ```
 npm start
@@ -19,8 +28,7 @@ npm start
 
 which should open a browser window on http://localhost:19002/. From here,
 you can choose to run on an iOS simulator, which will open the Simulator
-Application on MacOS. This project uses Expo, a tool to develop and build
-mobile applications across multiple platforms easily. To view this project
+Application on MacOS. To view this project
 on a physical mobile device, you can install the Expo Go Application,
 and scan the QRcode that appears once the site is running locally. For
 this to work correctly, the mobile device must be connected to the same
