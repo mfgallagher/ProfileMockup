@@ -62,6 +62,8 @@ export default function EditPhoto({navigation}: any, {route}: any) {
   } else {
     return (
       <SafeAreaView style={ styles.container }>
+        <Text style={ styles.title }> Upload a Photo! </Text>
+        
         <TouchableOpacity 
           onPress={openImagePickerAsync}
         >
